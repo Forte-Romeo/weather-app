@@ -48,12 +48,134 @@
                 </a>
 
             </nav>
-            
+
         </aside>
 
         <!-- ===== MAIN CONTENT ===== -->
          <main class="main-content">
 
+            <!-- Search Bar -->
+             <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for cities...">
+
+                <button id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+             </div>
+
+             <!-- Current Weather-->
+              <section class="current-weather">
+                <div class="weather-info">
+
+                    <h1 id="cityName">Accra</h1>
+                    <p class="rain-chance">
+                        Chance of rain:
+                        <span id="rainChance">0%</span>
+                    </p>
+                    <h2 id="temperature">31°</h2>
+
+                </div>
+
+                <div class="weather-icon">
+                    <img 
+                    src="https://openweathermap.org/img/wn/01d@4x.png" 
+                    alt="Weather Icon" 
+                    id="mainWeatherIcon"
+                    >
+                </div>
+              </section>
+
+              <!-- Today's Forecast-->
+               <section class="forecast-card">
+
+                <h3>TODAY"S FORECAST</h3>
+
+                <div class="hourly-forcast" id="hourlyForecast">
+
+                    <div class="hour-card">
+                        <p>6:00 AM</p>
+                        <img src="https://openweathermap.org/img/wn/03d.png" alt="">
+                        <h4>25°</h4>
+                    </div>
+
+                    <div class="hour-card">
+                        <p>9:00 AM</p>
+                        <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                        <h4>28°</h4>
+                    </div>
+
+                    <div class="hour-card">
+                        <p>12:00 PM</p>
+                        <img src="https://openweathermap.org/img/wn/01d.png" alt="">
+                        <h4>33°</h4>
+                    </div>
+
+                    <div class="hour-card">
+                        <p>3:00 PM</p>
+                        <img src="https://openweathermap.org/img/wn/01d.png" alt="">
+                        <h4>34°</h4>
+                    </div>
+
+                    <div class="hour-card">
+                        <p>6:00 PM</p>
+                        <img src="https://openweathermap.org/img/wn/01d.png" alt="">
+                        <h4>32°</h4>
+                    </div>
+
+                    <div class="hour-card">
+                        <p>9:00 PM</p>
+                        <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                        <h4>30°</h4>
+                    </div>
+
+                </div>
+               </section>
+
+               <!-- Air Conditions -->
+                <section class="air-conditions">
+
+                    <div class="section-header">
+                        <h3>AIR CONDITIONS</h3>
+                        <button class="see-more-btn">See More</button>
+                    </div>
+
+                    <div class="conditions-grid">
+
+                        <div class="condition-card">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-temperature-half"></i>
+                                <span>Real Feel</span>
+                            </div>
+                            <h4 id="feelsLike">30°</h4>
+                        </div>
+
+                        <div class="condition-card">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-wind"></i>
+                                <span>Wind</span>
+                            </div>
+                            <h4 id="windSpeed">0.2 km/h</h4>
+                        </div>
+
+                        <div class="condition-card">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-droplet"></i>
+                                <span>Humidity</span>
+                            </div>
+                            <h4 id="humidity">75%</h4>
+                        </div>
+
+                        <div class="condition-card">
+                            <div class="condition-title">
+                                <i class="fa-solid fa-sun"></i>
+                                <span>UV Index</span>
+                            </div>
+                            <h4 id="uvIndex">3</h4>
+                        </div>
+
+                    </div>
+                    
+                </section>
          </main>
 
          <!-- ===== WEEKLY FORECAST BAR ===== -->
