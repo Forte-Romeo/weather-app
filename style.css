@@ -232,3 +232,48 @@ body {
 .hour-card h4 {
     font-size: 1.5rem;
 }
+
+/* ===== AIR CONDITIONS ===== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.see-more-btn {
+    border: none;
+    background: #0095ff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.condition-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.condition-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9aa4b2;
+}
+
+.condition-title i {
+    font-size: 1rem;
+}
+
+.condition-card h4 {
+    font-size: 2rem;
+    margin-left: 30px;
+}
