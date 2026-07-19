@@ -334,3 +334,16 @@ body {
     background: #3b4b63;
     border-radius: 20px;
 }
+
+/* ===== HOVER EFFECTS ===== */
+.forecast-card,
+.air-conditions,
+.weekly-forecast {
+    transition: 0.3s ease;
+}
+
+.forecast-card:hover,
+.air-conditions:hover,
+.weekly-forecast:hover {
+    transform: translateY(-3px);
+}
