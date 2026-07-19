@@ -320,3 +320,17 @@ body {
 .day-weather span {
     font-weight: 500;
 }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a2431;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b4b63;
+    border-radius: 20px;
+}
