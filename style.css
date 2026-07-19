@@ -101,3 +101,11 @@ body {
 .nav-item:hover, .nav-item.active {
     color: white;
 }
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
