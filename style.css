@@ -145,3 +145,34 @@ body {
 .search-container button:hover {
     background: #1da1ff;
 }
+
+/* ===== CURRENT WEATHER ===== */
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+}
+
+.weather-info h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.rain-chance {
+    margin-top: 10px;
+    color: #9aa4b2;
+    font-size: 0.95rem;
+}
+
+.weather-info h2 {
+    margin-top: 50px;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.weather-info img {
+    width: 220px;
+    height: 220px;
+}
