@@ -277,3 +277,46 @@ body {
     font-size: 2rem;
     margin-left: 30px;
 }
+
+/* ===== WEEKLY FORECAST ===== */
+.weekly-forecast {
+    display: flex;
+    flex-direction: column;
+}
+
+#weeklyForecast {
+    display: flex;
+    flex-direction: column;
+}
+
+.day-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.day-card:last-child {
+    border-bottom: none;
+}
+
+.day-card p {
+    color: #d4d8de;
+    font-size: 0.95rem;
+}
+
+.day-weather {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+}
+
+.day-weather img {
+    width: 40px;
+}
+
+.day-weather span {
+    font-weight: 500;
+}
