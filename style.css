@@ -176,3 +176,21 @@ body {
     width: 220px;
     height: 220px;
 }
+
+/* ===== CARD STYLE ===== */
+.forecast-card,
+.air-conditions,
+.weekly-forecast {
+    background: #202b3b;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.forecast-card h3,
+.air-conditions h3,
+.weekly-forecast h3 {
+    font-size: 0.85rem;
+    color: #9aa4b2;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
