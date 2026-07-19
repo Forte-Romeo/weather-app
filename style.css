@@ -194,3 +194,41 @@ body {
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
+
+/* ===== HOURLY FORECAST ===== */
+.hourly-forecast {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.hour-card {
+    text-align: center;
+    position: relative;
+}
+
+.hour-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hour-card p {
+    color: #9aa4b2;
+    font-size: 0.9rem;
+}
+
+.hour-card img {
+    width: 60px;
+    margin: 15px 0;
+}
+
+.hour-card h4 {
+    font-size: 1.5rem;
+}
