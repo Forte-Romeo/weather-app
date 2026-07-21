@@ -86,3 +86,46 @@ function updateHourlyForecast(data) {
         hourlyForecast.appendChild(card);
     });
 }
+
+// ===== WEEKLY FORECAST ===== //
+function updateWeeklyForecast(data) {
+    weeklyForecast.innerHTML = "";
+
+    const days = data.forecast.forecastday;
+
+    days.forEach(day => {
+        const date = new Date(day.data);
+        const dayName = date.toLocaleDateString("en-US",
+            {
+                weekday: "short"
+            }
+        );
+        const card = document.createElement("div");
+        card.classList.add("day-card");
+
+        card.innerHTML = `
+            <p>${dayName}</p>
+
+            <div class="day-weather">
+
+                <img
+                src="https:${day.day.condition.icon}"
+                alt="${day.day.condition.text}"
+                >
+
+                <span>
+                    ${day.day.condition.text}
+                </span>
+
+            </div>
+
+            <p>
+                ${Math.round(day.day.maxtemp_c)}°
+                /
+                ${Math.round(day.day.mintemp_c)}°
+            </p>
+        `;
+
+    weeklyForecast.appendChild(card);
+  });
+}
