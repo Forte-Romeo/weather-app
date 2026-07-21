@@ -142,3 +142,20 @@ searchBtn.addEventListener(
         }
   }
 );
+
+// ===== ENTER KEY SUPPORT ===== //
+searchInput.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key === "Enter") {
+
+            const city =
+                searchInput.value.trim();
+
+            if (city !== "") {
+                getWeather(city);
+            }
+        }
+    }
+);
