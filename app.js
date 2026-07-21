@@ -129,3 +129,16 @@ function updateWeeklyForecast(data) {
     weeklyForecast.appendChild(card);
   });
 }
+
+// ===== SEARCH BUTTON ===== //
+searchBtn.addEventListener(
+    "click",
+    () => {
+        const city =
+            searchInput.value.trim();
+
+        if (city !== "") {
+            getWeather(city);
+        }
+  }
+);
