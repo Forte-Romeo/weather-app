@@ -35,3 +35,15 @@ async function getWeather(city) {
         console.error(error);
     }
 }
+
+// ===== CURRENT WEATHER DATA ===== //
+function updateCurrentWeather(data) {
+    cityName.textContent = data.location.name;
+    temperature.textContent = `${Math.round(data.current.temp_c)}°`;
+    rainChance.textContent = `${data.forecast.forecastday[0].day.daily_chance_of_rain}%`;
+    feelsLike.textContent = `${Math.round(data.current.feelslike_c)}°`;
+    windSpeed.textContent = `${data.current.wind_kph} km/h`;
+    humidity.textContent = `${data.current.humidity}%`;
+    uvIndex.textContent = data.current.uv;
+    mainWeatherIcon.src = `https:${data.current.condition.icon}`;
+}
