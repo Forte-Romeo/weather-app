@@ -159,3 +159,6 @@ searchInput.addEventListener(
         }
     }
 );
+
+// ===== DEFAULT CITY ===== //
+getWeather("Accra");
