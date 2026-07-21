@@ -94,11 +94,13 @@ function updateWeeklyForecast(data) {
     const days = data.forecast.forecastday;
 
     days.forEach(day => {
-        const date = new Date(day.data);
-        const dayName = date.toLocaleDateString("en-US",
+        const date = new Date(`${day.data}T00:00:00`);
+        const dayName = new Intl.DateTimeFormat("en-US",
             {
                 weekday: "short"
             }
+        ).format(
+            new Date(day.date_epoch * 1000)
         );
         const card = document.createElement("div");
         card.classList.add("day-card");
