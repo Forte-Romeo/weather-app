@@ -47,3 +47,42 @@ function updateCurrentWeather(data) {
     uvIndex.textContent = data.current.uv;
     mainWeatherIcon.src = `https:${data.current.condition.icon}`;
 }
+
+// ===== HOURLY FORECAST DATA ===== //
+function updateHourlyForecast(data) {
+    hourlyForecast.innerHTML = "";
+    const currentHour = new Date().getHours();
+    const todayHours = data.forecast.forecastday[0].hour;
+    const nextHours = todayHours.slice(
+        currentHour,
+        currentHour + 6
+    );
+
+    nextHours.forEach(hour => {
+        const time = new Date(hour.time);
+        const formattedTime = time.toLocaleTimeString(
+            [],
+            {
+                hour: "numeric",
+                minute: "2-digit"
+            }
+        );
+
+        const card = document.createElement("div");
+        card.classList.add("hour-card");
+        card.innerHTML = `
+        <p>${formattedTime}</p>
+        
+        <img
+        src="https:${hour.condition.icon}"
+        alt="${hour.condition.text}"
+        >
+        
+        <h4>${Math.round(
+            hour.temp_c
+        )}°</h4>
+        `;
+
+        hourlyForecast.appendChild(card);
+    });
+}
