@@ -1,5 +1,5 @@
 // ===== WEATHER API CONFIG ===== //
-const API_KEY = "cc1e9a6419ac40469eb105338262107";
+const API_KEY = "YOUR_API_KEY";
 const BASE_URL = "https://api.weatherapi.com/v1/forecast.json";
 
 // ===== DOM ELEMENTS ===== //
